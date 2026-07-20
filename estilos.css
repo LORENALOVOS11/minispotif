@@ -4,35 +4,56 @@ body{
     color:white;
     font-family:Arial, sans-serif;
     display:flex;
+    min-height:100vh;
 }
 
+/* Barra lateral */
 .sidebar{
     width:220px;
-    background:black;
-    height:100vh;
+    background:#000;
+    min-height:100vh;
     padding:20px;
+    box-sizing:border-box;
 }
 
 .sidebar h2{
     color:#1DB954;
+    margin-bottom:30px;
 }
 
 .sidebar a{
     display:block;
     color:white;
     text-decoration:none;
-    margin:25px 0;
+    margin:20px 0;
+    transition:0.3s;
 }
 
+.sidebar a:hover{
+    color:#1DB954;
+}
+
+/* Contenido */
 .contenido{
     flex:1;
     padding:30px;
 }
 
+/* Buscador */
+#buscar{
+    width:350px;
+    padding:12px;
+    border:none;
+    border-radius:20px;
+    margin-bottom:25px;
+    font-size:16px;
+}
+
+/* Tarjetas */
 .cards{
     display:flex;
-    gap:20px;
     flex-wrap:wrap;
+    gap:20px;
 }
 
 .card{
@@ -45,6 +66,7 @@ body{
 
 .card:hover{
     background:#282828;
+    transform:scale(1.03);
 }
 
 .portada{
@@ -57,6 +79,7 @@ body{
 .titulo{
     font-size:18px;
     font-weight:bold;
+    margin:10px 0 5px;
 }
 
 .artista{
@@ -68,48 +91,29 @@ audio{
     margin-top:10px;
 }
 
+/* Botón eliminar */
 .card-acciones{
-    display:flex;
-    justify-content:space-between;
-    margin-top:10px;
+    margin-top:15px;
 }
 
 .card-acciones a{
+    display:inline-block;
     text-decoration:none;
-    font-size:20px;
-}
-
-#buscar{
-
-    width: 350px;
-    padding: 12px;
-    border-radius: 20px;
-    border: none;
-    margin-bottom: 20px;
-    font-size: 16px;
-
-}
-
-
-
-.card-acciones a{
-
-    text-decoration: none;
-    color: white;
-    background: #1db954;
-    padding: 8px 15px;
-    border-radius: 20px;
-
-}
-
-
-
-footer{
-
-    position: fixed;
-    bottom: 15px;
-    right: 20px;
     color:white;
-    font-size: 15px;
+    background:#1DB954;
+    padding:8px 15px;
+    border-radius:20px;
+}
 
+.card-acciones a:hover{
+    background:#169c46;
+}
+
+/* Pie de página */
+footer{
+    position:fixed;
+    right:20px;
+    bottom:15px;
+    color:#b3b3b3;
+    font-size:15px;
 }
